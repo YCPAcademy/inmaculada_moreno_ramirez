@@ -28,10 +28,10 @@
 	<body>
 		
 		<?php
+		
 		    $tu_nombre="Pablo";
 			echo "Hola"."<b>"."&nbsp;".$tu_nombre."</b>"."&nbsp;"."encantado de conocerte.";
 			
-		
 		?>
 		
 		<footer>
