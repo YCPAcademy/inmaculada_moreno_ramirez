@@ -28,10 +28,24 @@
 	<body>
 		
 		<?php
-		
+			
+			/*
+			 * Como ya hemos tratado, hay muchas formas de llegar a un mismo fin, lo que has realizado esta muy bien.
+			 * y se consigues lo que se te solicitaba, pero vamos a ver otra forma que aunque muy parecida, es más practica
+			 * y solo utilizamos la concatenación cuando realmente es necesario.
+			 */
+			
 		    $tu_nombre="Pablo";
 			echo "Hola"."<b>"."&nbsp;".$tu_nombre."</b>"."&nbsp;"."encantado de conocerte.";
 			
+		?>
+		
+		<?php
+		
+			//This script saves a name in a variable and displays it with a text
+			$name = "Pablo"; //This variable stores the name
+			echo '<br/>Hola <strong>'.$name.'</strong> encantado de conocerte.'; //we print the message by concatenating the variable in position
+ 
 		?>
 		
 		<footer>
