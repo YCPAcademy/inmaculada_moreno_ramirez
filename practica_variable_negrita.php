@@ -48,6 +48,19 @@
  
 		?>
 		
+		<?php
+			
+			/*
+			 * Como ya hemos tratado, hay muchas formas de llegar a un mismo fin, lo que has realizado esta muy bien.
+			 * y se consigues lo que se te solicitaba, pero vamos a ver otra forma que aunque muy parecida, es más practica
+			 * y solo utilizamos la concatenación cuando realmente es necesario.
+			 */
+			
+		    $tu_nombre="Pablo";
+			echo "Hola<b> $tu_nombre </b>encantado de conocerte.";
+			
+		?>
+		
 		<footer>
 			
 			<p>&copy; 2014 Copyright  YCP</p>
