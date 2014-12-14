@@ -26,6 +26,7 @@
 
 	<body>
 			
+			<table border="1">
 			<?php
 			
 				/*
@@ -37,30 +38,23 @@
 				 $cont=0;
 				 
 				 for ($i=1; $i<=10; $i++){ // esta variable es para las columnas.
+				 
+				 	echo '<tr>';
 				 	
 				 	   for ($j=1; $j<=10; $j++){ // esta variable es para las filas.
+				 	   
+				 	   		echo '<td>' . $i*$j . '</td>';
 				 	   	
-							$resul=$i*$j; // multiplicamos la columna por la fila.
-								if($cont<=9){ // utilizamos un contador para dibujar la tabla.
-									
-									echo "$resul ";
-									$cont++;
-										
-								}
-								else{
-									
-									echo "<br/>";
-									echo "$resul ";
-									$cont=1;
+							
 									
 								}
 						
 					   }
 					
-				 }
+				 
 				
 			?>
-
+            </table>
 		
 		<footer>
 			

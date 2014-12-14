@@ -18,7 +18,6 @@
 
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -26,26 +25,30 @@
 	</head>
 
 	<body>
-		
-		<?php
 			
-			$ingreso = 1500 ;
-			$rendimiento = 3;
+			<table border="1">
+			<?php
 			
-			
-			if ($ingreso<=1500) {
+				/*
+				 * Crea un script que imprima por pantalla una tabla HTML que contenga la tabla de multiplicar, configura la tabla
+				 * para que tenga border 1, y recuerda que esta tabla tendrá un tamaño de 10x10.
+				 */
+				 
+								 
+				 for ($i=1; $i<=10; $i++){ // esta variable es para las columnas.
+				 
+				 	echo '<tr>';
+				 	
+				 	   for ($j=1; $j<=10; $j++){ // esta variable es para las filas.
+				 	   
+				 	   		echo '<td>' . $i*$j . '</td>';
+				 	   	
+						}
 				
-				if($rendimiento<=3){
+				  }
 					
-					echo "Recibe un bono de 5000€";
-				}
-					
-			}else{
-				 		
-				 	echo "Recibe un bono de 3000€";
-					
-			}	
-		?>
+			?>
+            </table>
 		
 		<footer>
 			
