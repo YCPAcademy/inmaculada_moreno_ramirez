@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -15,7 +16,7 @@
 		<meta name="description" content="" />
 		
 		<meta name="author" content="usuario" />
-
+ 
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
 		<link rel="shortcut icon" href="/favicon.ico" />
@@ -24,33 +25,31 @@
 		
 	</head>
 
-	<body>
+	<body>  
+		
+		    <?php
+		
+			$ciudades = array ('Londres', 'París', 'Los Ángeles', 'Bombay', 'Yakarta');
 			
-			<table border="1">
-			<?php
+			echo '<ul>';
 			
-				/*
-				 * Crea un script que imprima por pantalla una tabla HTML que contenga la tabla de multiplicar, configura la tabla
-				 * para que tenga border 1, y recuerda que esta tabla tendrá un tamaño de 10x10.
-				 */
-				 
-								 
-				 for ($i=1; $i<=10; $i++){ // esta variable es para las columnas.
-				 
-				 	echo '<tr>';
-				 	
-				 	   for ($j=1; $j<=10; $j++){ // esta variable es para las filas.
-				 	   
-				 	   		echo '<td>' . $i*$j . '</td>';
-				 	   	
-						}
-					   
-				     echo '</tr>';
-				
-				  }
+				foreach ($ciudades as $key => $c) {
 					
-			?>
-            </table>
+					echo '<li>';
+				
+					echo $key.$c;
+			
+					echo '</li>';
+				}
+			
+		
+		    echo '</ul>';
+			
+				
+		    ?>
+		    
+			
+
 		
 		<footer>
 			
