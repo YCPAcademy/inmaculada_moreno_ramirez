@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>HTML</title>
+		
+		<meta name="description" content="" />
+		
+		<meta name="author" content="usuario" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		
+	</head>
+
+	<body>
+			
+		<?php
+			
+				
+				/*
+				 * Dado un array de 20 elementos que consiste en números reales (con coma decimal) 
+				 * y que cada elemento representa la venta del día de un comercio. 
+				 * Calcular el promedio de venta por día utilizando alguna estructura iterativa. 
+				 * Mostrar el resultado por pantalla.
+				 */
+
+		    $ventas_dia = array (120.25, 85.05, 90.36, 98.95, 102.51,
+					                  79.17, 89.55, 80.69, 86.77, 115.85,
+					                  124.25, 92.24, 94.97, 112.73, 127.85,
+					                  100.05, 105.42, 91.12, 99.51, 95.63
+					                );
+									
+			echo calculo_promedio ($ventas_dia);
+					
+		?>
+		
+		<?php
+		
+		 	function calculo_promedio ($ventas_dia){
+		 		
+ 					static $promedio = 0.0;
+					           
+					for ($i=0; $i<count($ventas_dia);$i++){
+						
+						$promedio= $promedio + $ventas_dia[$i];
+						
+					}
+ 
+				$promedio= $promedio/count($ventas_dia);
+				return $promedio;
+			
+			}
+									
+			?>
+
+		
+		<footer>
+			
+			<p>&copy; 2014 Copyright  YCP</p>
+		
+		</footer>
+
+	</body>
+	
+</html>
