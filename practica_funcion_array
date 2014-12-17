@@ -48,20 +48,10 @@
 		
 		<?php
 		
-		 	function calculo_promedio ($ventas_dia){
-		 		
- 					$promedio = 0.0;
-					           
-					for ($i=0; $i<count($ventas_dia);$i++){
-						
-						$promedio= $promedio + $ventas_dia[$i];
-						
-					}
- 
-				$promedio= $promedio/count($ventas_dia);
-				return $promedio;
-			
-			}
+		 	$a="a,b,c,d";
+		 	$a=explode(",", $a);
+			echo $a;
+		 	
 									
 			?>
 
