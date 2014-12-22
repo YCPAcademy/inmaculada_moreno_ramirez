@@ -36,6 +36,8 @@
 			$var_string_1="95 5 778 55 50";
 			$var_string_1 =str_replace(" ", "", $var_string_1);
 		    echo $var_string_1;
+			
+			
 			 
 					
 		    ?>

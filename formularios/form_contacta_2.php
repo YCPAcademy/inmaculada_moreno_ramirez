@@ -32,6 +32,8 @@
 	<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
+
+
 <body>
 <div class="container">
 	<div class="row clearfix">
