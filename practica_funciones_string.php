@@ -15,7 +15,7 @@
 		<meta name="description" content="" />
 		
 		<meta name="author" content="usuario" />
-
+ 
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
 		<link rel="shortcut icon" href="/favicon.ico" />
@@ -24,34 +24,23 @@
 		
 	</head>
 
-	<body>
+	<body>  
+		
+		    <?php
+		
+			$var_string='0.25';
+			$var_string = str_replace(".", ",", $var_string);
+			//echo $var_string;
+		
+		
+			$var_string_1="95 5 778 55 50";
+			$var_string_1 =str_replace(" ", "", $var_string_1);
+		    echo $var_string_1;
 			 
-		
-		<?php
-		
-		  $cp = '41700'; //lo hemos capturado de un formulario.
-		  $pattern="/^[0-9]$/"; //esto no comprobaría que tiene 5 dígitos.
-		  //Strlen()//nos devuelve el número de caracteres que es no puede ser mayor de 5.
-		  echo strlen($cp);
-		  if(strlen($cp)==5 AND preg_match($pattern, $cp)){
-		  	echo "el código postal es correcto.";
-		  	
-		  }else{
-		  	 echo "el código postal es erróneo.";
-		  }
-		  
-		  $dni ="4887647ky";
-		  $pattern="/^[0-9]+[a-z]$/";
-		  if(strlen($dni)==9 AND preg_match($pattern, $dni)){
-		  	echo "el din es correcto.";
-		  	
-		  }else{
-		  	 echo "el din es erróneo.";
-		  }
+					
+		    ?>
+		    
 			
-			
-		 						
-		?>
 
 		
 		<footer>

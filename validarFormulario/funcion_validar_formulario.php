@@ -3,6 +3,10 @@
 		
 		function validarFormulario ($array_datos){
 			
+			
+			
+			
+			
 			if (is_array($array_datos) AND !empty($array_datos)){ //compruebo que el parámetro de entrada es un array y que no está vacío.
 			
 				$cont=1;

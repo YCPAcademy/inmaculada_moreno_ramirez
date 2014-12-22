@@ -43,7 +43,7 @@
 				<div class="col-md-4 column">
 				</div>
 				<div class="col-md-4 column">
-					<form method="get" class="form-horizontal" role="form">
+					<form method="post" class="form-horizontal" role="form">
 						
 						<div class="form-group">
 							 <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
@@ -75,11 +75,11 @@
 					
 					<?php
 						
-						if(isset($_GET['submit'])){
+						if(isset($_POST['submit'])){
 							
-							echo "Nombre: ".$_GET['name']."</br>";
-							echo "Email: ".$_GET["email"]."</br>";
-							echo "Comentario: ".$_GET["comentario"];
+							echo "Nombre: ".$_POST['name']."</br>";
+							echo "Email: ".$_POST["email"]."</br>";
+							echo "Comentario: ".$_POST["comentario"];
 							
 							
 						}

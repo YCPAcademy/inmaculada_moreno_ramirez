@@ -43,12 +43,12 @@
 				<div class="col-md-4 column">
 				</div>
 				<div class="col-md-4 column">
-					<form method="get" class="form-horizontal" role="form">
+					<form method="post" class="form-horizontal" role="form">
 						
 						<div class="form-group">
 							 <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
 							<div class="col-sm-10">
-								<input name="name" type="text" class="form-control" id="inputEmail3">
+								<input value="<?php ?>" name="name" type="text" class="form-control" id="inputEmail3">
 							</div>
 						</div>
 						
@@ -75,11 +75,20 @@
 					
 					<?php
 						
-						if(isset($_GET['submit'])){
+						if(isset($_POST['submit'])){
+								
 							
-							echo "Nombre: ".$_GET['name']."</br>";
-							echo "Email: ".$_GET["email"]."</br>";
-							echo "Comentario: ".$_GET["comentario"];
+							$data=array(
+							
+								"nombre" =>$_POST['name'],
+								"email" =>$_POST["email"],
+								"comentario" =>$_POST["comentario"]
+								
+							);
+							
+							
+							require dirname(__FILE__)."/funciones/valida_form_contacta.php";
+							echo valida_form_contacta ($data);
 							
 							
 						}
