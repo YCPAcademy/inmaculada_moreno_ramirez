@@ -44,22 +44,80 @@
 				</div>
 				<div class="col-md-4 column">
 					<form class="form-horizontal" role="form">
+						
 						<div class="form-group">
-							 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+							 <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
 							<div class="col-sm-10">
-								<input type="email" class="form-control" id="inputEmail3">
-							</div>
-						</div>
-						<div class="form-group">
-							 <label for="inputPassword3" class="col-sm-2 control-label">Pass</label>
-							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3">
+								<input name="name" type="text" class="form-control" id="inputEmail3">
 							</div>
 						</div>
 						
 						<div class="form-group">
+							 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+							<div class="col-sm-10">
+								<input name="email" type="text" class="form-control" id="email">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							 <label for="inputPassword3" class="col-sm-2 control-label"></label>
+							<div class="col-sm-10">
+								<textarea placeholder="comentario" class="form-control" id="comentario" name="comentario"></textarea>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							
+							<div class="checkbox">
+								
+							  <label>
+							    <input name="check_1" type="checkbox" value="Opción 1">
+							    Opción 1
+							  </label>
+							</div>
+							
+							<div class="checkbox">
+							  <label>
+							    <input name="check_2" type="checkbox" value="Opción 2">
+							   Opción 2
+							  </label>
+							</div>
+							
+						</div>
+						
+						<div class="form-group">
+							
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios1" value="Opción 1" checked>
+							    Opción 1
+							  </label>
+							</div>
+							
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios1" value="Opción 2" checked>
+							    Opción 2
+							  </label>
+							</div>
+							
+						</div>
+						
+						<div class="form-group">
+							
+							<select name="select" class="form-control">
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+							</select>
+							
+						</div>
+						
+						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
-								 <button type="submit" class="btn btn-default">Sign in</button>
+								 <button type="submit" class="btn btn-default">Enviar</button>
 							</div>
 						</div>
 					</form>
