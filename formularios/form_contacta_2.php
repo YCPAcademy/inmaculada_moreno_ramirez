@@ -45,7 +45,7 @@
 				<div class="col-md-4 column">
 				</div>
 				<div class="col-md-4 column">
-					<form class="form-horizontal" role="form">
+					<form method="post" class="form-horizontal" role="form">
 						
 						<div class="form-group">
 							 <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
@@ -123,6 +123,35 @@
 							</div>
 						</div>
 					</form>
+					
+					<?php
+						
+						if(isset($_POST['submit'])){
+								
+							
+							$data=array(
+							
+								"nombre" =>$_POST['name'],
+								"email" =>$_POST["email"],
+								"comentario" =>$_POST["comentario"],
+								"check_1" =>$_POST["check_1"],
+								"check_2" =>$_POST["check_2"],
+								"select" =>$_POST["select"]
+								
+								
+								
+							);
+							
+							
+							require dirname(__FILE__)."/funciones/valida_form_contacta.php";
+							echo valida_form_contacta ($data);
+							
+							
+						}
+						
+						
+					?>
+					
 				</div>
 				<div class="col-md-4 column">
 				</div>
