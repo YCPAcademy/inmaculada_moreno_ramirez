@@ -43,26 +43,26 @@
 				<div class="col-md-4 column">
 				</div>
 				<div class="col-md-4 column">
-					<form method="get" class="form-horizontal" role="form">
+					<form method="post" class="form-horizontal" role="form">
 						
 						<div class="form-group">
 							 <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
 							<div class="col-sm-10">
-								<input name="name" type="text" class="form-control" id="inputEmail3">
+								<input value="<?php if(isset($_POST['name'])) echo $_POST['name'] ?>" name="name" type="text" class="form-control" id="inputEmail3">
 							</div>
 						</div>
 						
 						<div class="form-group">
 							 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 							<div class="col-sm-10">
-								<input name="email" type="text" class="form-control" id="email">
+								<input value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" name="email" type="text" class="form-control" id="email">
 							</div>
 						</div>
 						
 						<div class="form-group">
 							 <label for="inputPassword3" class="col-sm-2 control-label"></label>
 							<div class="col-sm-10">
-								<textarea placeholder="comentario" class="form-control" id="comentario" name="comentario"></textarea>
+								<textarea placeholder="comentario" class="form-control" id="comentario" name="comentario"><?php if(isset($_POST['comentario'])) echo $_POST['comentario'] ?></textarea>
 							</div>
 						</div>
 						
@@ -75,12 +75,11 @@
 					
 					<?php
 						
-						if(isset($_GET['submit'])){
+						if(isset($_POST['submit'])){
 							
-							echo "Nombre: ".$_GET['name']."</br>";
-							echo "Email: ".$_GET["email"]."</br>";
-							echo "Comentario: ".$_GET["comentario"];
-							
+							echo "Nombre: ".$_POST['name']."</br>";
+							echo "Email: ".$_POST["email"]."</br>";
+							echo "Comentario: ".$_POST["comentario"];
 							
 						}
 						
