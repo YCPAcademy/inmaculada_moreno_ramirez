@@ -33,36 +33,29 @@
 				die ("Error al conectar con la base de datos".mysqli_connect_error());
 			}
 			
-			$sql = "SELECT id_venta, dia_venta FROM ventas";//no poner * si no lo voy a utilizar todo, estaría bien pero no es correcto porque tarda más.
+			$sql = "SELECT * FROM ventas WHERE id_venta=".$_GET['id_venta'];
 			
 				if ($result =$mysqli -> query ($sql)){
 					if ($result -> num_rows >0){
-						while ($row = $result -> fetch_array ()){
-							
-							echo $row ["id_venta"]."</br>";
+						
+						$row = $result -> fetch_assoc();
+						    echo $row ["id_venta"]."</br>";
 							echo date ("d-m-Y",strtotime($row ["dia_venta"]))."</br>";
-							echo '<a href="ver_registro.php?id_venta='.$row ["id_venta"].'">ver registro</a> | ';
-							echo '<a href="editar_registro.php?id_venta='.$row ["id_venta"].'">editar registro</a> | ';
-							echo '<a href="borrar_registro.php?id_venta='.$row ["id_venta"].'">borrar registro</a> | ';
-							echo "<hr>";	
-						}
-						
-						
-					}else{
-						
-						echo "No se han encontrado registros.";
+							echo $row ["ciudad_venta"]."</br>";
+							echo $row ["num_venta"];
+								
 					}
 					
 				}else{
-					echo "Error no fue posible ejecutar".$sql.$mysqli->error();
+					
+					echo "Error no fue posible ejecutar".$sql.$mysqli->error();//concatenados con $sql con el $mysqli error.
 				}
 			
 			$mysqli->close();
 						
 			?>
 	
-		<a href="crear_registro.php">añadir registro</a>
-			
+		
 		<footer>
 			
 			<p>&copy; 2014 Copyright  YCP</p>

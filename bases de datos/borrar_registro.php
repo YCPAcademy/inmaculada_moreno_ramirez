@@ -33,24 +33,22 @@
 				die ("Error al conectar con la base de datos".mysqli_connect_error());
 			}
 			
-			$sql = "SELECT 'id_venta, dia_venta' FROM ventas";
+			$sql = "SELECT * FROM ventas WHERE id_venta=".$_GET['id_venta'];
 			
 				if ($result =$mysqli -> query ($sql)){
 					if ($result -> num_rows >0){
-						while ($row = $result -> fetch_array ()){
-							
-							echo $row ["id_venta"]."</br>";
-							echo $row ["dia_venta"];
-							echo "<hr>";	
-						}
 						
-					}else{
-						
-						echo "No se han encontrado registros.";
+						$row = $result -> fetch_assoc();
+						    echo $row ["id_venta"]."</br>";
+							echo date ("d-m-Y",strtotime($row ["dia_venta"]))."</br>";
+							echo $row ["ciudad_venta"]."</br>";
+							echo $row ["num_venta"];
+								
 					}
 					
 				}else{
-					echo "Error no fue posible ejecutar".$sql.$mysqli->error();
+					
+					echo "Error no fue posible ejecutar".$sql.$mysqli->error();//concatenados con $sql con el $mysqli error.
 				}
 			
 			$mysqli->close();
