@@ -83,7 +83,7 @@
 							}
 								
 							$sql = "INSERT INTO ventas (dia_venta, ciudad_venta, num_venta)
-							VALUES ('".$_POST['dia_venta']."','".$_POST["ciudad_venta"]."',".$_POST['num_venta'].")";
+							VALUES ('".$_POST["dia_venta"]."','".$_POST["ciudad_venta"]."',".$_POST["num_venta"].")";
 							
 								if ($mysqli -> query($sql) === TRUE){
 									

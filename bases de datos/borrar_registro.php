@@ -33,26 +33,21 @@
 				die ("Error al conectar con la base de datos".mysqli_connect_error());
 			}
 			
-			$sql = "SELECT * FROM ventas WHERE id_venta=".$_GET['id_venta'];
-			
-				if ($result =$mysqli -> query ($sql)){
-					if ($result -> num_rows >0){
-						
-						$row = $result -> fetch_assoc();
-						    echo $row ["id_venta"]."</br>";
-							echo date ("d-m-Y",strtotime($row ["dia_venta"]))."</br>";
-							echo $row ["ciudad_venta"]."</br>";
-							echo $row ["num_venta"];
-								
+				if(isset($_GET['id_venta'])){
+					
+					$sql="DELETE FROM ventas WHERE id_venta =".$_GET["id_venta"]."";
+				
+				
+				if ($mysqli -> query($sql) === TRUE){
+									
+										$mysqli->close();
+									    header("Location:practica_2_bbdd.php"); //redireccionamiento directo sin necesidad de dar a ningún link
+										
+							}else{
+							    
+								echo "Error al añadir el registro".$mysqli->error();
+							}
 					}
-					
-				}else{
-					
-					echo "Error no fue posible ejecutar".$sql.$mysqli->error();//concatenados con $sql con el $mysqli error.
-				}
-			
-			$mysqli->close();
-						
 			?>
 	
 		
