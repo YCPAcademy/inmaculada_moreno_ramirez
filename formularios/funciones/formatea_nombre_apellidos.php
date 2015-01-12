@@ -1,7 +1,7 @@
 <?php
 	
 	
-	function valida_nombre_apellidos ($data = array()){
+	function formatea_nombre_apellidos ($text){
 		
 		$msj = ""; // mensaje que mostramos.
 		$num_item_array = count($data);// items que tiene el array.

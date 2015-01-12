@@ -80,7 +80,7 @@
 							
 							
 							require dirname(__FILE__)."/funciones/valida_nombre_apellidos.php";
-							echo valida_nombre_apellidos ($data);
+							echo formatea_nombre_apellidos ($data);
 							
 							
 						}
