@@ -1390,3 +1390,36 @@ org.eclipse.swt.SWTException: Widget is disposed
 
 !ENTRY org.eclipse.core.jobs 2 2 2014-12-30 20:29:11.957
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.internal.DefaultAnalyticsEventHandler$1
+!SESSION 2015-01-09 18:02:10.645 -----------------------------------------------
+eclipse.buildId=3.6.1.201410201044
+java.version=1.7.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-01-09 20:19:14.920
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.internal.DefaultAnalyticsEventHandler$1
+!SESSION 2015-01-12 18:04:28.136 -----------------------------------------------
+eclipse.buildId=3.6.1.201410201044
+java.version=1.7.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.editor.php 4 0 2015-01-12 19:02:36.090
+!MESSAGE (Build 3.6.1.201410201044) [ERROR]  PHP documentation hover - error getting an element at offset - 782
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.AbstractDocument.get(AbstractDocument.java:1038)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.get(SynchronizableDocument.java:139)
+	at com.aptana.editor.php.internal.ui.hover.PHPTextHover.getPHPElementsAt(PHPTextHover.java:272)
+	at com.aptana.editor.php.internal.ui.hover.PHPTextHover.getHoverInfo2(PHPTextHover.java:183)
+	at com.aptana.editor.php.internal.ui.hover.PHPBestMatchHover.getHoverInfo2(PHPBestMatchHover.java:59)
+	at com.aptana.editor.common.CommonSourceViewerConfiguration$TextHover.getHoverInfo2(CommonSourceViewerConfiguration.java:679)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.ui 4 0 2015-01-12 19:25:32.475
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.jruby.exceptions.RaiseException: (Errno::EINVAL) =::
+	at org.jruby.RubyHash.replace(org/jruby/RubyHash.java:1623)
