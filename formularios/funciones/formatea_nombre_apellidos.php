@@ -7,7 +7,7 @@
 	
 				if(preg_match('/^[a-zA-Z\-_]{4,15}$/i', $text)){
 					
-					echo ucfirst (strtolower ($text));
+					$msj= ucfirst (strtolower ($text));
 					
 				}else{
 					
@@ -17,7 +17,7 @@
 			
 				if(preg_match("/^\s*([\pL\w\s]+)\s*([\pL\w\s-]+)\s*$/u", $text)){
 					
-					echo ucwords (strtolower ($text));
+					$msj= ucwords (strtolower ($text));
 					
 				}else{
 					

@@ -68,23 +68,19 @@
 					
 					<?php
 						
-						if(isset($_POST['submit'])){
+						if(isset($_POST['name'])){
 								
-							
-							$data=array(
-							
-								"nombre" =>$_POST['name'],
-								"apellidos" =>$_POST["apellidos"]
-								
-							);
-							
-							
-							require dirname(__FILE__)."/funciones/valida_nombre_apellidos.php";
-							echo formatea_nombre_apellidos ($data);
-							
+							require dirname(__FILE__)."/funciones/formatea_nombre_apellidos.php";
+							echo formatea_nombre_apellidos ($_POST['name']);						
 							
 						}
 						
+						//if(isset($_POST['apellidos'])){
+								
+							//require dirname(__FILE__)."/funciones/formatea_nombre_apellidos.php";
+							//echo formatea_nombre_apellidos ($_POST['apellidos']);						
+							
+						//}
 						
 					?>
 					
