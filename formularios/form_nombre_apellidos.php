@@ -67,20 +67,20 @@
 					</form>
 					
 					<?php
-						
+					
+						require dirname(__FILE__)."/funciones/formatea_nombre_apellidos.php";
 						if(isset($_POST['name'])){
 								
-							require dirname(__FILE__)."/funciones/formatea_nombre_apellidos.php";
+							
 							echo formatea_nombre_apellidos ($_POST['name']);						
 							
 						}
 						
-						//if(isset($_POST['apellidos'])){
+						if(isset($_POST['apellidos'])){
 								
-							//require dirname(__FILE__)."/funciones/formatea_nombre_apellidos.php";
-							//echo formatea_nombre_apellidos ($_POST['apellidos']);						
+							echo formatea_nombre_apellidos ($_POST['apellidos']);						
 							
-						//}
+						}
 						
 					?>
 					
