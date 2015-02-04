@@ -1,2 +1,3 @@
-FIND_BAR_DECORATOR_FIND_ENTRIES=\#\r\n\#Mon Jan 12 19\:46\:16 CET 2015\r\n3\=INICIO\r\n2\=categoria\r\n1\=Categoria\r\n0\=Ir a Categor\\u00EDas\r\n
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\r\n\#Mon Jan 26 18\:24\:23 CET 2015\r\n6\=INICIO\r\n5\=categoria\r\n4\=Categoria\r\n3\=Ir a Categor\\u00EDas\r\n2\=$category\r\n1\=$row\r\n0\=$category2\r\n
+FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\r\n\#Mon Jan 26 18\:24\:23 CET 2015\r\n1\=$category\r\n0\=$post\r\n
 eclipse.preferences.version=1
